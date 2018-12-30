@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: itoken-eureka
+  boot:
+    admin:
+      client:
+        url: http://192.168.79.128:8084
+  zipkin:
+    base-url: http://192.168.79.128:9411
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: 192.168.79.128
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://192.168.79.128:8761/eureka/,http://192.168.79.128:8861/eureka/,http://192.168.79.128:8961/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
