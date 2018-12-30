@@ -13,7 +13,7 @@ spring:
           uri: https://github.com/staytruestaywild/itoken-config.git
           search-paths: respo
           username: staytruestaywild
-          password: bwh13459788
+          password:
   zipkin:
     base-url: http://192.168.79.128:9411
 
